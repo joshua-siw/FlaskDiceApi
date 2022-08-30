@@ -14,30 +14,37 @@ Windows
 Installiere benötigte Pakete
     pip3 install -r requirements.txt
 
-Api starten
+Anwendung starten
     in cmd.exe oder Powershell 
         python3 wsgi.py
-Alternativ kann die Anwendung über uwsgi gestartet werden
+Alternativ kann die Anwendung über uwsgi gestartet werden der default port ist 6800
+	uwsgi --ini app.ini --need-app
 	
 
 localhost:2784/api/dice aufrufen um zu würfeln.
-	Antwort im Format: 
-localhost:2784/api/dicelist aufrufen um vorherige Ergebnisse anzuzeigen.
+	Antwort im Format: ["number",2]
 
-Place prometheus.yml where you execute Prometheus or add to your scraperconfig from prometheus.txt
+localhost:2784/api/dicelist aufrufen um vorherige Ergebnisse anzuzeigen.
+	Antwort im Format: ["list",[2,3,1,5,2,4]]
+
 Platziere prometheus.yml in dein Prometheus verzeichniss oder füge folgende config hinzu.
 
 - job_name: "dice"
 
-    # metrics_path defaults to '/metrics'
-    # scheme defaults to 'http'.
-
     static_configs:
       - targets: ["localhost:2784"]
       # use with uwsgi
-      #- targets: ["localhost:6800/api"]
+      #- targets: ["localhost:6800"]
 
-Diese "Api" verwendet flask session objekte welche cookies als authentifizierung benötigen.
+Prometheus Metriken werden über den Port 9090 ausgegeben
+und sind mit 
+- 'count_throws'
+- 'show_results'
+verfügbar
+
+
+Diese "Api" verwendet flask session objekte welche Cookies als authentifizierung benötigen, um zwischen den unregistrierten Usern zu unterscheiden.
+
 
 
 
