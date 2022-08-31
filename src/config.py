@@ -8,4 +8,5 @@ FLASK_ENV = 'development'
 SECRET_KEY = urandom(12)
 # Alternativ kann auch im cache gespeichert werden
 SESSION_TYPE = 'filesystem'
+# Wenn der Browser geschlossen wird ist die Sitzung beendet
 SESSION_PERMANENT = False
