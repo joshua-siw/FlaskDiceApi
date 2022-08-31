@@ -16,9 +16,9 @@ Installiere benötigte Pakete
 
 Anwendung starten
     in cmd.exe oder Powershell 
-        python3 wsgi.py
-Alternativ kann die Anwendung über uwsgi gestartet werden der default port ist 6800
-	uwsgi --ini app.ini --need-app
+        "python3 wsgi.py"
+Alternativ kann die Anwendung über uwsgi gestartet werden.
+	"uwsgi --ini app.ini --need-app"
 	
 
 localhost:2784/api/dice aufrufen um zu würfeln.
@@ -43,7 +43,7 @@ und sind mit
 verfügbar
 
 
-Diese "Api" verwendet flask session objekte welche Cookies als authentifizierung benötigen, um zwischen den unregistrierten Usern zu unterscheiden.
+Diese "Api" verwendet flask_session welche Cookies zur authentifizierung benötigen, um zwischen den unregistrierten Usern zu unterscheiden.
 
 
 
