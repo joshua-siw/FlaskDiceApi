@@ -8,7 +8,7 @@ from .metrics import throws_metric, results_metric
 blueprint_dice = Blueprint(name="blueprint_dice", import_name=__name__)
 
 
-# add view function to the blueprint
+
 @blueprint_dice.route('/test', methods=['GET'])
 def test():
     """
@@ -27,7 +27,7 @@ def test():
     output = {"msg": "I'm the test endpoint from blueprint_dice."}
     return jsonify(output)
 
-# add view function to the blueprint
+
 @blueprint_dice.route('/dice', methods=['GET'])
 def rolldice():
     """
