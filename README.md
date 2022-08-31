@@ -38,12 +38,12 @@ localhost:2784/api/dicelist aufrufen um vorherige Ergebnisse anzuzeigen.
 
 Platziere prometheus.yml in dein Prometheus verzeichniss oder füge folgende config hinzu.
 
-- job_name: "dice"
+"- job_name: "dice"
 
     static_configs:
       - targets: ["localhost:2784"]
       # use with uwsgi
-      #- targets: ["localhost:6800"]
+      #- targets: ["localhost:6800"]"
 
 Prometheus Metriken werden über den Port 9090 ausgegeben
 und sind mit 
