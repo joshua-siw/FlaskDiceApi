@@ -27,12 +27,12 @@ Alternativ kann die Anwendung über uwsgi gestartet werden.
 	"uwsgi --ini app.ini --need-app"
 	
 
-localhost:2784/api/dice aufrufen um zu würfeln.
+localhost:{port}/api/dice aufrufen um zu würfeln.
 	Antwort im Format: 
 	
 	"["number",2]"
 
-localhost:2784/api/dicelist aufrufen um vorherige Ergebnisse anzuzeigen.
+localhost:{port}/api/dicelist aufrufen um vorherige Ergebnisse anzuzeigen.
 	Antwort im Format: 
 	
 	"["list",[2,3,1,5,2,4]]"
