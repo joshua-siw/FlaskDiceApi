@@ -1,21 +1,14 @@
 # SimpleDiceFlask
 
-Requirements: Python3, pip3, venv
+Requirements: Python3, pip3, pipenv
 
-Erstelle virtuelle Umgebung in SimpleDiceFlask
+Erstelle virtuelle Umgebung in FlaskDiceApi
 
 Windows
 
     "cd *\virualenv
-    python venv -m venv
-    PowerShell
-        .\Activate.ps1
-    cmd.exe
-        .\activate.bat"
+     python3 -m pipenv install -r requirements.txt"
 
-Installiere benötigte Pakete
-
-    "pip3 install -r requirements.txt"
 
 Anwendung starten
 
