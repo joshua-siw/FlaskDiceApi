@@ -4,7 +4,6 @@ from prometheus_client import generate_latest
 from flask import Flask, jsonify, session
 from flask_session import Session
 
-from src.api_spec import spec
 from .blueprints.blueprint_dice import blueprint_dice
 from .blueprints.blueprint_dicelist import blueprint_dicelist
 
