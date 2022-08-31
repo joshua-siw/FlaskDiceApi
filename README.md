@@ -27,11 +27,13 @@ Alternativ kann die Anwendung über uwsgi gestartet werden.
 
 localhost:2784/api/dice aufrufen um zu würfeln.
 	Antwort im Format: 
-	["number",2]
+	
+	"["number",2]"
 
 localhost:2784/api/dicelist aufrufen um vorherige Ergebnisse anzuzeigen.
 	Antwort im Format: 
-	["list",[2,3,1,5,2,4]]
+	
+	"["list",[2,3,1,5,2,4]]"
 
 Platziere prometheus.yml in dein Prometheus verzeichniss oder füge folgende config hinzu.
 
