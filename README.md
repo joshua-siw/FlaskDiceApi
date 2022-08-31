@@ -4,12 +4,13 @@ Requirements: Python3, pip3, venv
 
 Erstelle virtuelle Umgebung in SimpleDiceFlask
 Windows
-    cd *\virualenv
+
+    "cd *\virualenv
     python venv -m venv
     PowerShell
         .\Activate.ps1
     cmd.exe
-        .\activate.bat
+        .\activate.bat"
 
 Installiere benötigte Pakete
     pip3 install -r requirements.txt
