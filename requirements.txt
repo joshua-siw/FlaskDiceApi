@@ -2,4 +2,3 @@ flask
 prometheus-flask-exporter
 requests
 flask-session
-uwsgi
