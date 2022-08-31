@@ -15,9 +15,13 @@ Installiere benötigte Pakete
     pip3 install -r requirements.txt
 
 Anwendung starten
+
     in cmd.exe oder Powershell 
+    
         "python3 wsgi.py"
+	
 Alternativ kann die Anwendung über uwsgi gestartet werden.
+
 	"uwsgi --ini app.ini --need-app"
 	
 
