@@ -6,7 +6,7 @@ Erstelle virtuelle Umgebung in FlaskDiceApi
 
 Windows
 
-    "cd *\virualenv
+    "cd *\FlaskDiceApi
      python3 -m pipenv install -r requirements.txt"
 
 
