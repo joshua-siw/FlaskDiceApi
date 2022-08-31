@@ -14,7 +14,8 @@ Windows
         .\activate.bat"
 
 Installiere benötigte Pakete
-    pip3 install -r requirements.txt
+
+    "pip3 install -r requirements.txt"
 
 Anwendung starten
 
@@ -37,7 +38,7 @@ localhost:{port}/api/dicelist aufrufen um vorherige Ergebnisse anzuzeigen.
 	
 	"["list",[2,3,1,5,2,4]]"
 
-Platziere prometheus.yml in dein Prometheus verzeichniss oder füge folgende config hinzu.
+Platziere prometheus.yml in dein Prometheus Verzeichnis oder füge folgende Konfiguration hinzu.
 
 "- job_name: "dice"
 
@@ -46,11 +47,11 @@ Platziere prometheus.yml in dein Prometheus verzeichniss oder füge folgende con
       # use with uwsgi
       #- targets: ["localhost:6800"]"
 
-Prometheus Metriken werden über den Port 9090 ausgegeben
+Prometheus Metriken werden über den Port 9090 ausgegeben,
 und sind mit 
 - 'count_throws'
 - 'show_results'
-verfügbar
+verfügbar.
 
 
 Diese "Api" verwendet flask_session welche Cookies zur authentifizierung benötigen, um zwischen den unregistrierten Usern zu unterscheiden.
