@@ -1,11 +1,5 @@
 flask
 prometheus-flask-exporter
-pytest
 requests
-apispec
-apispec-webframeworks
-marshmallow
-flask-swagger-ui
 flask-session
-flask-caching
 uwsgi
