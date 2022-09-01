@@ -5,7 +5,7 @@ blueprint_dicelist = Blueprint(name="blueprint_dicelist", import_name=__name__)
 
 
 
-@blueprint_dicelist.route('/test', methods=['GET'])
+@blueprint_dicelist.route('/dicelist/test', methods=['GET'])
 def test():
     """
     ---
