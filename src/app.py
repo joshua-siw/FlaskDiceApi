@@ -10,6 +10,7 @@ from .blueprints.blueprint_dicelist import blueprint_dicelist
 # Initialisiere Flask App
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
+# Verknüpft die Session mit der Anwendung
 Session(app)
 
 # Löscht die alten flask-session Daten
@@ -23,7 +24,7 @@ def before_first_request():
 def metrics():
     return generate_latest()
 
-# Registriere die Blueprints
+# Registriere Blueprints 
 app.register_blueprint(blueprint_dicelist, url_prefix="/api")
 app.register_blueprint(blueprint_dice, url_prefix="/api")
 
