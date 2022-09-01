@@ -2,7 +2,12 @@ from flask import Blueprint, jsonify, request, session
 
 blueprint_dicelist = Blueprint(name="blueprint_dicelist", import_name=__name__)
 
-
+def outputsession(keystr):
+    if keystr in session:
+      return jsonify('list',session[keystr])
+    else:
+      return jsonify('msg', 'Please Throw a Dice or activate cookies')
+    
 
 
 @blueprint_dicelist.route('/dicelist/test', methods=['GET'])
@@ -39,9 +44,5 @@ def viewList():
       tags:
           - result list
     """
-    if 'throws' in session:
-      output = {"list": "your last results are '{}'"}
-      return jsonify('list',session['throws'])
-    else:
-      return jsonify('msg', 'Please Throw a Dice or activate cookies')
+    outputsession("throws")
     
