@@ -1,6 +1,5 @@
 from flask import Blueprint, jsonify, request, session
 
-# define the blueprint
 blueprint_dicelist = Blueprint(name="blueprint_dicelist", import_name=__name__)
 
 
