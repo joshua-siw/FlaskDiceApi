@@ -10,6 +10,13 @@ def dice():
   result = randint(1,6)
   return result
 
+# Erstellt oder fügt zur Session hinzu
+def checksession(keystr,result):
+  if keystr in session:
+    session[keystr].append(result)
+  else:
+    session[keystr] = [result]
+    
 @blueprint_dice.route('/dice/test', methods=['GET'])
 def test():
     """
@@ -46,10 +53,7 @@ def rolldice():
     """
     throws_metric.inc()
     diceRes = dice()
-    if "throws" in session:
-      session["throws"].append(diceRes)
-    else:
-      session["throws"] = [diceRes]
+    checksession("throws",diceRes)
     results_metric.observe(diceRes)
     output = {"msg": f"Your result is: '{diceRes}'"}
     return jsonify('number',diceRes) 
