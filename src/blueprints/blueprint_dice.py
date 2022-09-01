@@ -7,7 +7,10 @@ from .metrics import throws_metric, results_metric
 
 blueprint_dice = Blueprint(name="blueprint_dice", import_name=__name__)
 
-
+# Erstelle den Würfel 
+def dice():
+  result = randint(1,6)
+  return result
 
 @blueprint_dice.route('/dice/test', methods=['GET'])
 def test():
@@ -44,7 +47,7 @@ def rolldice():
           - result
     """
     throws_metric.inc()
-    diceRes = randint(1,6)
+    diceRes = dice()
     if "throws" in session:
       session["throws"].append(diceRes)
     else:
