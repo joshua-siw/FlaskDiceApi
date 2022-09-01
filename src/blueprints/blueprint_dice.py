@@ -9,7 +9,7 @@ blueprint_dice = Blueprint(name="blueprint_dice", import_name=__name__)
 
 
 
-@blueprint_dice.route('/test', methods=['GET'])
+@blueprint_dice.route('/dice/test', methods=['GET'])
 def test():
     """
     ---
