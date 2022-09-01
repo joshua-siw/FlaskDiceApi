@@ -47,7 +47,7 @@ und sind mit
 verfügbar.
 
 
-Diese "Api" verwendet flask_session welche Cookies zur authentifizierung benötigen, um zwischen den unregistrierten Usern zu unterscheiden.
+Diese "Api" verwendet flask_session welche Cookies zur authentifizierung benötigt, um zwischen den unregistrierten Usern zu unterscheiden.
 
 
 
