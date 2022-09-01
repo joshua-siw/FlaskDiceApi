@@ -2,8 +2,6 @@ from flask import Blueprint, jsonify, request,session
 from random import randint
 from .metrics import throws_metric, results_metric
 
-# define the blueprint
-
 
 blueprint_dice = Blueprint(name="blueprint_dice", import_name=__name__)
 
