@@ -44,5 +44,5 @@ def viewList():
       tags:
           - result list
     """
-    outputsession("throws")
+    return outputsession("throws")
     
